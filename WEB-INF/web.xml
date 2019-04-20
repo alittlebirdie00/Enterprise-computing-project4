@@ -1,0 +1,28 @@
+<web-app>
+    <display-name>
+        A Three-Tier Distributed Web-Based Application
+    </display-name>
+    <description>
+        A Three-Tier Distributed Web-Based Application with JSP
+    </description>
+
+    <servlet>
+        <servlet-name>project4servlet</servlet-name>
+        <description>
+            A servlet that hanldes commands against the local database
+        </description>
+        <servlet-class>
+            Project4Servlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>project4servlet</servlet-name>
+        <url-pattern>/project4servlet</url-pattern>
+    </servlet-mapping>
+
+    <resource-env-ref>
+        <resource-env-ref-name>jdbc/project4</resource-env-ref-name>
+        <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
+    </resource-env-ref>
+</web-app>
